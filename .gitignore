@@ -1,2 +1,5 @@
 venv
 .env
+mongo-volume
+__pycache__/
+api/__pycache__/

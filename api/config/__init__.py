@@ -15,7 +15,7 @@ class DevelopmentConfig(Config):
     DEBUG = True
     SECRET_KEY = "secr3t"
     APP_FQDN = "localhost:9000"
-    DATABASE_HOST = os.getenv("MONGO_HOST", "localhost")
+    DATABASE_HOST = os.getenv("MONGO_IP", "localhost")
     DATABASE_PORT = os.getenv("MONGO_PORT", 27017)
 
 
@@ -24,7 +24,7 @@ class TestConfig(Config):
     LOG_LEVEL = logging.DEBUG
     SECRET_KEY = "test"
     APP_FQDN = "localhost:9000"
-    DATABASE_HOST = os.getenv("MONGO_HOST", "localhost")
+    DATABASE_HOST = os.getenv("MONGO_IP", "localhost")
     DATABASE_PORT = os.getenv("MONGO_PORT", 27018)
 
 
