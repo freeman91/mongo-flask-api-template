@@ -21,7 +21,7 @@ def connect() -> MongoClient:
         if ENV == "dev":
             client = MongoClient(
                 host=[DOMAIN + ":" + PORT],
-                serverSelectionTimeoutMS=5000,  
+                serverSelectionTimeoutMS=5000,
                 username=MONGO_INITDB_ROOT_USERNAME,
                 password=MONGO_INITDB_ROOT_PASSWORD,
             )
@@ -34,5 +34,6 @@ def connect() -> MongoClient:
     except ServerSelectionTimeoutError as err:
         client = None
         print("pymongo ERROR:", err)
+
 
 database = connect()

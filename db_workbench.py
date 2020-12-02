@@ -1,12 +1,14 @@
 import os, sys
 from dotenv import load_dotenv
 from pymongo import MongoClient
+
 load_dotenv()
 
 USERNAME = os.getenv("MONGO_INITDB_ROOT_USERNAME")
 PASSWORD = os.getenv("MONGO_INITDB_ROOT_PASSWORD")
 MONGO_URI = os.getenv("MONGO_URI")
 ENV = sys.argv[1]
+
 
 def connect() -> MongoClient:
     client = None
@@ -22,7 +24,5 @@ def connect() -> MongoClient:
     return client["database"]
 
 
-
-
-if __name__ == "__main__":    
+if __name__ == "__main__":
     db = connect()

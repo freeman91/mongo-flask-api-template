@@ -4,6 +4,7 @@ from api.db import database as db
 
 user = Blueprint("user", __name__)
 
+
 @user.route("/user")
 def user_add():
     user = db.users.find_one()

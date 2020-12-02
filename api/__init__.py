@@ -1,5 +1,5 @@
 import logging
-import  os
+import os
 
 from flask import Flask, jsonify, request
 from flask_meter import FlaskMeter
@@ -9,6 +9,7 @@ from api.config import app_config
 from api.db import database
 
 flask_meter = FlaskMeter()
+
 
 def create_app():
     app = Flask(__name__)
