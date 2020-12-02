@@ -13,7 +13,6 @@ flask_meter = FlaskMeter()
 
 def create_app():
     app = Flask(__name__)
-    app.register_blueprint(user)
 
     logger = logging.getLogger()
     logger.setLevel(app_config.LOG_LEVEL)
@@ -21,6 +20,8 @@ def create_app():
     app.config.from_object(app_config)
 
     flask_meter.init_app(app)
+    
+    app.register_blueprint(user)
 
     @app.route("/")
     def index():
