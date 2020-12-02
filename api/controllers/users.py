@@ -2,10 +2,10 @@ from flask import request, Blueprint
 
 from api.db import database as db
 
-user = Blueprint("user", __name__)
+users = Blueprint("users", __name__)
 
 
-@user.route("/user")
+@users.route("/users")
 def user_add():
     user = db.users.find_one()
     user["_id"] = str(user["_id"])

@@ -1,17 +1,17 @@
 import setuptools
 
-# with open("README.md", "r") as fh:
-#     long_description = fh.read()
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
 setuptools.setup(
-    name="cashflow-api",
+    name="",
     version="0.0.0",
     author="Addison Freeman",
     author_email="addisonfreeman91@gmail.com",
-    description="Cashflow API service",
-    # long_description=long_description,
+    description="API service",
+    long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/freeman91/cashflow-api",
+    url="https://github.com/freeman91/mongo-flask-api-template",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

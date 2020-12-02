@@ -21,7 +21,7 @@ def create_app():
 
     flask_meter.init_app(app)
     
-    app.register_blueprint(user)
+    app.register_blueprint(users)
 
     @app.route("/")
     def index():
